@@ -91,22 +91,22 @@ NSDictionary* normalAttributes;
 
 	NSString *aString = [def definition];
 	// the index of the next character to write
-	unsigned index = 0;
-	unsigned strLength = [aString length];
+	NSUInteger index = 0;
+	NSUInteger strLength = [aString length];
 
 	// YES if and only if we are inside a link
 	BOOL inLink = NO;
   
-	NSInteger nextBracketIdx;
+	NSUInteger nextBracketIdx;
   
 	while (index < strLength) 
 	{
 		if (inLink == YES) 
 		{
 			nextBracketIdx = [aString firstIndexOf: (unichar)'}'
-			                             fromIndex: index];
+			                             fromIndex: (int)index];
       
-			if (nextBracketIdx == NSNotFound) 
+			if (nextBracketIdx == NSNotFound)
 			{
 				/* treat as if the next bracket started right after the
 				   last character in the string */
@@ -120,7 +120,7 @@ NSDictionary* normalAttributes;
 			NSString* linkContent = [aString substringWithRange: NSMakeRange(index, nextBracketIdx-index)];
       
 			// next index is right after the found bracket
-			index = nextBracketIdx + 1;
+            index = nextBracketIdx + 1;
       
 			// we're not in the link any more
 			inLink = NO;
@@ -131,17 +131,18 @@ NSDictionary* normalAttributes;
 		else 
 		{ // inLink == FALSE
 			nextBracketIdx = [aString firstIndexOf: (unichar)'{'
-			                             fromIndex: index];
+			                             fromIndex: (int)index];
       
-			if (nextBracketIdx == NSNotFound) 
+			if (nextBracketIdx == NSNotFound || nextBracketIdx > strLength)
 			{
 				/* treat as if the next bracket was right after the
 				   last character in the string */
 				nextBracketIdx = strLength;
 			}
-      
+
+            // NSLog(@"Index: %lo, Length: %lo", (unsigned long)nextBracketIdx, (unsigned long)strLength);
 			// crop text
-			NSString* text = [aString substringWithRange: NSMakeRange(index, nextBracketIdx-index)];
+			NSString* text = [aString substringWithRange: NSMakeRange(index, (int)nextBracketIdx-index)];
       
 			// proceed right after the bracket
 			index = nextBracketIdx + 1;
@@ -314,14 +315,16 @@ NSDictionary* normalAttributes;
 // debugging if -rescanDictionaries above is commented out. 
 #ifdef PREDEFINED_DICTIONARIES // predefined dictionaries
 	    // create local dictionary object
+        LocalDictionary *dict;
 	    dict = [[LocalDictionary alloc] initWithResourceName: @"jargon"];
 	    [dictionaries addObject: dict];
 	    [dict release];
 #ifdef REMOTE_DICTIONARIES // remote dictionaries
 	    // create remote dictionary object
-	    dict = [[DictConnection alloc] init];
-	    [dictionaries addObject: dict];
-	    [dict release];
+        DictConnection *dictCon;
+	    dictCon = [[DictConnection alloc] init];
+	    [dictionaries addObject: dictCon];
+	    [dictCon release];
 #endif // end remote dictionaries block
 #endif // end predefined dictionaries
 }

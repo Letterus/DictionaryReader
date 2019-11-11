@@ -110,22 +110,34 @@
 - (NSString *) dictionaryStoreFile
 {
 	NSFileManager *fm = [NSFileManager defaultManager];
+
+#ifdef GNUSTEP
 	NSString *path = [@"~/GNUstep/Library/DictionaryReader" stringByExpandingTildeInPath];
+#else
+    NSString *path = [@"~/Library/Application Support/DictionaryReader" stringByExpandingTildeInPath];
+#endif
+
 	BOOL isDir = NO;
 	if ([fm fileExistsAtPath: path isDirectory: &isDir] == NO)
 	{
 		/* Directory does not exist, create it */
+#ifdef GNUSTEP
 		if ([fm createDirectoryAtPath: path attributes: nil] == NO)
+#else
+        NSError * error;
+        [fm createDirectoryAtPath: path withIntermediateDirectories:YES attributes: nil error: &error];
+        if (error)
+#endif
 		{
 			/* Cannot create path */
-			NSLog(@"Error: cannot create ~/GNUstep/Library/DictionaryReader/");
+			NSLog(@"Error: cannot create %@", path);
 			return nil;
 		}
 	}
 	else if (isDir == NO)
 	{
 		/* path exist, but not a directory */
-		NSLog(@"Error: ~/GNUstep/Library/DictionaryReader is not a directory");
+		NSLog(@"Error: %@ is not a directory", path);
 		return nil;
 	}
 
@@ -163,6 +175,7 @@
 {
 	NSArray* searchPaths = [NSArray arrayWithObjects:
 		@"~/GNUstep/Library/DictionaryReader/Dictionaries",  // user home
+        @"~/Library/Application Support/DictionaryReader",
 		/* Add more location if needed */
         nil
     ];

@@ -1,31 +1,59 @@
-{
-    ApplicationDescription = "A Dict client for GNUstep";
-    ApplicationIcon = DictionaryReader.tif;
-    ApplicationName = DictionaryReader;
-    ApplicationRelease = 0.3;
-    Authors = (
-	"Yen-Ju Chen <yjchenx gmail>",
-	"Guenther Noack <guenther@unix-ag.uni-kl.de>",
-	"With help from:",
-	"Quentin Mathe",
-	"Chris B. Vetter"
-    );
-    Copyright = "Copyright (C) 2006, 2007 Guenther Noack, Yen-Ju Chen";
-    CopyrightDescription = "Released under the terms of MIT Licence.";
-    NSIcon = DictionaryReader.tif;
-    NSTypes = (
-    );
-    NSServices = (
-      {
-        NSPortName = DictionaryReader;
-        NSMessage = lookupInDictionary;
-        NSSendTypes = (NSStringPboardType);
-	NSKeyEquivalent = {
-	  default = "=";
-	 };
-        NSMenuItem = {
-          default = "Look Up in Dictionary";
-         };
-      }
-    );
-}
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>NSIcon</key>
+	<string>DictionaryReader.tif</string>
+	<key>CFBundleIconFile</key>
+	<string>DictionaryReader</string>
+	<key>ApplicationDescription</key>
+	<string>A Dict client for GNUstep</string>
+	<key>ApplicationIcon</key>
+	<string>DictionaryReader.tif</string>
+	<key>ApplicationName</key>
+	<string>DictionaryReader</string>
+	<key>ApplicationRelease</key>
+	<string>0.3</string>
+	<key>Authors</key>
+	<array>
+		<string>Yen-Ju Chen &lt;yjchenx gmail&gt;</string>
+		<string>Guenther Noack &lt;guenther@unix-ag.uni-kl.de&gt;</string>
+		<string>With help from:</string>
+		<string>Quentin Mathe</string>
+		<string>Chris B. Vetter</string>
+	</array>
+	<key>Copyright</key>
+	<string>Copyright (C) 2006, 2007 Guenther Noack, Yen-Ju Chen</string>
+	<key>CopyrightDescription</key>
+	<string>Released under the terms of MIT Licence.</string>
+	<key>NSMainNibFile</key>
+	<string>DictionaryReader</string>
+	<key>NSPrincipalClass</key>
+	<string>NSApplication</string>
+	<key>NSServices</key>
+	<array>
+		<dict>
+			<key>NSKeyEquivalent</key>
+			<dict>
+				<key>default</key>
+				<string>=</string>
+			</dict>
+			<key>NSMenuItem</key>
+			<dict>
+				<key>default</key>
+				<string>Look Up in Dictionary</string>
+			</dict>
+			<key>NSMessage</key>
+			<string>lookupInDictionary</string>
+			<key>NSPortName</key>
+			<string>DictionaryReader</string>
+			<key>NSSendTypes</key>
+			<array>
+				<string>NSStringPboardType</string>
+			</array>
+		</dict>
+	</array>
+	<key>NSTypes</key>
+	<array/>
+</dict>
+</plist>

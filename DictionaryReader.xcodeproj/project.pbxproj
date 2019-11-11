@@ -1,0 +1,529 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D40D71982379F7F700C83D5F /* Definition.m in Sources */ = {isa = PBXBuildFile; fileRef = D40D71572379F7F200C83D5F /* Definition.m */; };
+		D40D719A2379F7F700C83D5F /* DictionaryHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = D40D715B2379F7F200C83D5F /* DictionaryHandle.m */; };
+		D40D719C2379F7F700C83D5F /* UKNibOwner.m in Sources */ = {isa = PBXBuildFile; fileRef = D40D715E2379F7F200C83D5F /* UKNibOwner.m */; };
+		D40D719E2379F7F700C83D5F /* AppController.m in Sources */ = {isa = PBXBuildFile; fileRef = D40D71602379F7F300C83D5F /* AppController.m */; };
+		D40D719F2379F7F700C83D5F /* NSString+DictLineParsing.m in Sources */ = {isa = PBXBuildFile; fileRef = D40D71612379F7F300C83D5F /* NSString+DictLineParsing.m */; };
+		D40D71A02379F7F700C83D5F /* DictConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = D40D71622379F7F300C83D5F /* DictConnection.m */; };
+		D40D71A22379F7F700C83D5F /* HistoryManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D40D71672379F7F300C83D5F /* HistoryManager.m */; };
+		D40D71AA2379F7F700C83D5F /* DictionaryReader.nib in Resources */ = {isa = PBXBuildFile; fileRef = D40D71732379F7F400C83D5F /* DictionaryReader.nib */; };
+		D40D71AE2379F7F700C83D5F /* Preferences.nib in Resources */ = {isa = PBXBuildFile; fileRef = D40D71792379F7F400C83D5F /* Preferences.nib */; };
+		D40D71AF2379F7F700C83D5F /* NSString+Clickable.m in Sources */ = {isa = PBXBuildFile; fileRef = D40D717B2379F7F400C83D5F /* NSString+Clickable.m */; };
+		D40D71B22379F7F700C83D5F /* StreamLineReader.m in Sources */ = {isa = PBXBuildFile; fileRef = D40D71802379F7F400C83D5F /* StreamLineReader.m */; };
+		D40D71B32379F7F700C83D5F /* StreamLineWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = D40D71812379F7F500C83D5F /* StreamLineWriter.m */; };
+		D40D71B52379F7F700C83D5F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D40D71852379F7F500C83D5F /* main.m */; };
+		D40D71B72379F7F700C83D5F /* LocalDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = D40D71872379F7F600C83D5F /* LocalDictionary.m */; };
+		D40D71B92379F7F700C83D5F /* NSScanner+Base64Encoding.m in Sources */ = {isa = PBXBuildFile; fileRef = D40D71892379F7F600C83D5F /* NSScanner+Base64Encoding.m */; };
+		D40D71BA2379F7F700C83D5F /* NSString+Convenience.m in Sources */ = {isa = PBXBuildFile; fileRef = D40D718B2379F7F600C83D5F /* NSString+Convenience.m */; };
+		D40D71BB2379F7F700C83D5F /* Preferences.m in Sources */ = {isa = PBXBuildFile; fileRef = D40D718C2379F7F600C83D5F /* Preferences.m */; };
+		D40D71BC2379F7F700C83D5F /* jargon.dict in Resources */ = {isa = PBXBuildFile; fileRef = D40D71902379F7F700C83D5F /* jargon.dict */; };
+		D40D71BE2379F7F700C83D5F /* DictionaryReader.tif in Resources */ = {isa = PBXBuildFile; fileRef = D40D71922379F7F700C83D5F /* DictionaryReader.tif */; };
+		D40D71BF2379F7F700C83D5F /* dict.png in Resources */ = {isa = PBXBuildFile; fileRef = D40D71932379F7F700C83D5F /* dict.png */; };
+		D40D71C3237A068000C83D5F /* jargon.index in Resources */ = {isa = PBXBuildFile; fileRef = D40D71912379F7F700C83D5F /* jargon.index */; };
+		D40D71C6237A0F4700C83D5F /* DictionaryReader.iconset in Resources */ = {isa = PBXBuildFile; fileRef = D40D71C5237A0F4600C83D5F /* DictionaryReader.iconset */; };
+		D45344DE237A274900D96562 /* DictionaryReaderInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = D45344DD237A274900D96562 /* DictionaryReaderInfo.plist */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		D40D71422379F7C600C83D5F /* DictionaryReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DictionaryReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D40D71562379F7F200C83D5F /* Definition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Definition.h; sourceTree = "<group>"; };
+		D40D71572379F7F200C83D5F /* Definition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Definition.m; sourceTree = "<group>"; };
+		D40D71582379F7F200C83D5F /* TODO */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TODO; sourceTree = "<group>"; };
+		D40D71592379F7F200C83D5F /* NSString+Convenience.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Convenience.h"; sourceTree = "<group>"; };
+		D40D715A2379F7F200C83D5F /* HistoryManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HistoryManager.h; sourceTree = "<group>"; };
+		D40D715B2379F7F200C83D5F /* DictionaryHandle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DictionaryHandle.m; sourceTree = "<group>"; };
+		D40D715C2379F7F200C83D5F /* GNUmakefile.postamble */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = GNUmakefile.postamble; sourceTree = "<group>"; };
+		D40D715D2379F7F200C83D5F /* NSScanner+Base64Encoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSScanner+Base64Encoding.h"; sourceTree = "<group>"; };
+		D40D715E2379F7F200C83D5F /* UKNibOwner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UKNibOwner.m; sourceTree = "<group>"; };
+		D40D715F2379F7F300C83D5F /* INSTALL */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = INSTALL; sourceTree = "<group>"; };
+		D40D71602379F7F300C83D5F /* AppController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppController.m; sourceTree = "<group>"; };
+		D40D71612379F7F300C83D5F /* NSString+DictLineParsing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+DictLineParsing.m"; sourceTree = "<group>"; };
+		D40D71622379F7F300C83D5F /* DictConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DictConnection.m; sourceTree = "<group>"; };
+		D40D71632379F7F300C83D5F /* NSString+Clickable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Clickable.h"; sourceTree = "<group>"; };
+		D40D71642379F7F300C83D5F /* StreamLineWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StreamLineWriter.h; sourceTree = "<group>"; };
+		D40D71652379F7F300C83D5F /* rfc2229.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = rfc2229.txt; sourceTree = "<group>"; };
+		D40D71662379F7F300C83D5F /* AppController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppController.h; sourceTree = "<group>"; };
+		D40D71672379F7F300C83D5F /* HistoryManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HistoryManager.m; sourceTree = "<group>"; };
+		D40D71682379F7F300C83D5F /* GNUstep.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GNUstep.h; sourceTree = "<group>"; };
+		D40D71692379F7F300C83D5F /* DictionaryHandle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DictionaryHandle.h; sourceTree = "<group>"; };
+		D40D716A2379F7F400C83D5F /* ChangeLog */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ChangeLog; sourceTree = "<group>"; };
+		D40D716D2379F7F400C83D5F /* Magnify.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = Magnify.tiff; sourceTree = "<group>"; };
+		D40D716E2379F7F400C83D5F /* Magnify_32.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = Magnify_32.tiff; sourceTree = "<group>"; };
+		D40D716F2379F7F400C83D5F /* data.classes */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = data.classes; sourceTree = "<group>"; };
+		D40D71702379F7F400C83D5F /* data.info */ = {isa = PBXFileReference; lastKnownFileType = file; path = data.info; sourceTree = "<group>"; };
+		D40D71712379F7F400C83D5F /* magnifyingGlass.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = magnifyingGlass.tiff; sourceTree = "<group>"; };
+		D40D71722379F7F400C83D5F /* objects.gorm */ = {isa = PBXFileReference; lastKnownFileType = file; path = objects.gorm; sourceTree = "<group>"; };
+		D40D71742379F7F400C83D5F /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = DictionaryReader.nib; sourceTree = "<group>"; };
+		D40D71762379F7F400C83D5F /* data.classes */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = data.classes; sourceTree = "<group>"; };
+		D40D71772379F7F400C83D5F /* data.info */ = {isa = PBXFileReference; lastKnownFileType = file; path = data.info; sourceTree = "<group>"; };
+		D40D71782379F7F400C83D5F /* objects.gorm */ = {isa = PBXFileReference; lastKnownFileType = file; path = objects.gorm; sourceTree = "<group>"; };
+		D40D717A2379F7F400C83D5F /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = Preferences.nib; sourceTree = "<group>"; };
+		D40D717B2379F7F400C83D5F /* NSString+Clickable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Clickable.m"; sourceTree = "<group>"; };
+		D40D717C2379F7F400C83D5F /* Preferences.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Preferences.h; sourceTree = "<group>"; };
+		D40D717D2379F7F400C83D5F /* UKNibOwner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UKNibOwner.h; sourceTree = "<group>"; };
+		D40D717E2379F7F400C83D5F /* COPYING */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = COPYING; sourceTree = "<group>"; };
+		D40D717F2379F7F400C83D5F /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
+		D40D71802379F7F400C83D5F /* StreamLineReader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StreamLineReader.m; sourceTree = "<group>"; };
+		D40D71812379F7F500C83D5F /* StreamLineWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StreamLineWriter.m; sourceTree = "<group>"; };
+		D40D71822379F7F500C83D5F /* NSString+DictLineParsing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+DictLineParsing.h"; sourceTree = "<group>"; };
+		D40D71832379F7F500C83D5F /* LocalDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocalDictionary.h; sourceTree = "<group>"; };
+		D40D71842379F7F500C83D5F /* GNUmakefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = GNUmakefile; sourceTree = "<group>"; };
+		D40D71852379F7F500C83D5F /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D40D71862379F7F500C83D5F /* DictionaryReader.pmproj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = DictionaryReader.pmproj; sourceTree = "<group>"; };
+		D40D71872379F7F600C83D5F /* LocalDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocalDictionary.m; sourceTree = "<group>"; };
+		D40D71882379F7F600C83D5F /* GNUmakefile.preamble */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = GNUmakefile.preamble; sourceTree = "<group>"; };
+		D40D71892379F7F600C83D5F /* NSScanner+Base64Encoding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSScanner+Base64Encoding.m"; sourceTree = "<group>"; };
+		D40D718A2379F7F600C83D5F /* DictConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DictConnection.h; sourceTree = "<group>"; };
+		D40D718B2379F7F600C83D5F /* NSString+Convenience.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Convenience.m"; sourceTree = "<group>"; };
+		D40D718C2379F7F600C83D5F /* Preferences.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Preferences.m; sourceTree = "<group>"; };
+		D40D71902379F7F700C83D5F /* jargon.dict */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = jargon.dict; sourceTree = "<group>"; };
+		D40D71912379F7F700C83D5F /* jargon.index */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = jargon.index; sourceTree = "<group>"; };
+		D40D71922379F7F700C83D5F /* DictionaryReader.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = DictionaryReader.tif; sourceTree = "<group>"; };
+		D40D71932379F7F700C83D5F /* dict.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dict.png; sourceTree = "<group>"; };
+		D40D71942379F7F700C83D5F /* etoile_back.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = etoile_back.tiff; sourceTree = "<group>"; };
+		D40D71952379F7F700C83D5F /* etoile_forward.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = etoile_forward.tiff; sourceTree = "<group>"; };
+		D40D71962379F7F700C83D5F /* StreamLineReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StreamLineReader.h; sourceTree = "<group>"; };
+		D40D71C5237A0F4600C83D5F /* DictionaryReader.iconset */ = {isa = PBXFileReference; lastKnownFileType = folder.iconset; path = DictionaryReader.iconset; sourceTree = "<group>"; };
+		D45344DD237A274900D96562 /* DictionaryReaderInfo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = DictionaryReaderInfo.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D40D713F2379F7C600C83D5F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D40D71392379F7C600C83D5F = {
+			isa = PBXGroup;
+			children = (
+				D40D716A2379F7F400C83D5F /* ChangeLog */,
+				D40D717E2379F7F400C83D5F /* COPYING */,
+				D40D715F2379F7F300C83D5F /* INSTALL */,
+				D40D717F2379F7F400C83D5F /* README */,
+				D40D71652379F7F300C83D5F /* rfc2229.txt */,
+				D40D71582379F7F200C83D5F /* TODO */,
+				D40D716B2379F7F400C83D5F /* English.lproj */,
+				D40D718D2379F7F700C83D5F /* Resources */,
+				D40D71662379F7F300C83D5F /* AppController.h */,
+				D40D71602379F7F300C83D5F /* AppController.m */,
+				D40D71562379F7F200C83D5F /* Definition.h */,
+				D40D71572379F7F200C83D5F /* Definition.m */,
+				D40D718A2379F7F600C83D5F /* DictConnection.h */,
+				D40D71622379F7F300C83D5F /* DictConnection.m */,
+				D40D71692379F7F300C83D5F /* DictionaryHandle.h */,
+				D40D715B2379F7F200C83D5F /* DictionaryHandle.m */,
+				D45344DD237A274900D96562 /* DictionaryReaderInfo.plist */,
+				D40D71862379F7F500C83D5F /* DictionaryReader.pmproj */,
+				D40D71842379F7F500C83D5F /* GNUmakefile */,
+				D40D715C2379F7F200C83D5F /* GNUmakefile.postamble */,
+				D40D71882379F7F600C83D5F /* GNUmakefile.preamble */,
+				D40D71682379F7F300C83D5F /* GNUstep.h */,
+				D40D715A2379F7F200C83D5F /* HistoryManager.h */,
+				D40D71672379F7F300C83D5F /* HistoryManager.m */,
+				D40D71832379F7F500C83D5F /* LocalDictionary.h */,
+				D40D71872379F7F600C83D5F /* LocalDictionary.m */,
+				D40D71852379F7F500C83D5F /* main.m */,
+				D40D715D2379F7F200C83D5F /* NSScanner+Base64Encoding.h */,
+				D40D71892379F7F600C83D5F /* NSScanner+Base64Encoding.m */,
+				D40D71632379F7F300C83D5F /* NSString+Clickable.h */,
+				D40D717B2379F7F400C83D5F /* NSString+Clickable.m */,
+				D40D71592379F7F200C83D5F /* NSString+Convenience.h */,
+				D40D718B2379F7F600C83D5F /* NSString+Convenience.m */,
+				D40D71822379F7F500C83D5F /* NSString+DictLineParsing.h */,
+				D40D71612379F7F300C83D5F /* NSString+DictLineParsing.m */,
+				D40D717C2379F7F400C83D5F /* Preferences.h */,
+				D40D718C2379F7F600C83D5F /* Preferences.m */,
+				D40D71962379F7F700C83D5F /* StreamLineReader.h */,
+				D40D71802379F7F400C83D5F /* StreamLineReader.m */,
+				D40D71642379F7F300C83D5F /* StreamLineWriter.h */,
+				D40D71812379F7F500C83D5F /* StreamLineWriter.m */,
+				D40D717D2379F7F400C83D5F /* UKNibOwner.h */,
+				D40D715E2379F7F200C83D5F /* UKNibOwner.m */,
+				D40D71432379F7C600C83D5F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D40D71432379F7C600C83D5F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D40D71422379F7C600C83D5F /* DictionaryReader.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D40D716B2379F7F400C83D5F /* English.lproj */ = {
+			isa = PBXGroup;
+			children = (
+				D40D716C2379F7F400C83D5F /* DictionaryReader.gorm */,
+				D40D71732379F7F400C83D5F /* DictionaryReader.nib */,
+				D40D71752379F7F400C83D5F /* Preferences.gorm */,
+				D40D71792379F7F400C83D5F /* Preferences.nib */,
+			);
+			path = English.lproj;
+			sourceTree = "<group>";
+		};
+		D40D716C2379F7F400C83D5F /* DictionaryReader.gorm */ = {
+			isa = PBXGroup;
+			children = (
+				D40D716D2379F7F400C83D5F /* Magnify.tiff */,
+				D40D716E2379F7F400C83D5F /* Magnify_32.tiff */,
+				D40D716F2379F7F400C83D5F /* data.classes */,
+				D40D71702379F7F400C83D5F /* data.info */,
+				D40D71712379F7F400C83D5F /* magnifyingGlass.tiff */,
+				D40D71722379F7F400C83D5F /* objects.gorm */,
+			);
+			path = DictionaryReader.gorm;
+			sourceTree = "<group>";
+		};
+		D40D71752379F7F400C83D5F /* Preferences.gorm */ = {
+			isa = PBXGroup;
+			children = (
+				D40D71762379F7F400C83D5F /* data.classes */,
+				D40D71772379F7F400C83D5F /* data.info */,
+				D40D71782379F7F400C83D5F /* objects.gorm */,
+			);
+			path = Preferences.gorm;
+			sourceTree = "<group>";
+		};
+		D40D718D2379F7F700C83D5F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D40D71C5237A0F4600C83D5F /* DictionaryReader.iconset */,
+				D40D718E2379F7F700C83D5F /* Dictionaries */,
+				D40D71922379F7F700C83D5F /* DictionaryReader.tif */,
+				D40D71932379F7F700C83D5F /* dict.png */,
+				D40D71942379F7F700C83D5F /* etoile_back.tiff */,
+				D40D71952379F7F700C83D5F /* etoile_forward.tiff */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		D40D718E2379F7F700C83D5F /* Dictionaries */ = {
+			isa = PBXGroup;
+			children = (
+				D40D718F2379F7F700C83D5F /* jargon */,
+			);
+			path = Dictionaries;
+			sourceTree = "<group>";
+		};
+		D40D718F2379F7F700C83D5F /* jargon */ = {
+			isa = PBXGroup;
+			children = (
+				D40D71902379F7F700C83D5F /* jargon.dict */,
+				D40D71912379F7F700C83D5F /* jargon.index */,
+			);
+			path = jargon;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D40D71412379F7C600C83D5F /* DictionaryReader */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D40D71532379F7C700C83D5F /* Build configuration list for PBXNativeTarget "DictionaryReader" */;
+			buildPhases = (
+				D40D713E2379F7C600C83D5F /* Sources */,
+				D40D713F2379F7C600C83D5F /* Frameworks */,
+				D40D71402379F7C600C83D5F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DictionaryReader;
+			productName = DictionaryReader;
+			productReference = D40D71422379F7C600C83D5F /* DictionaryReader.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D40D713A2379F7C600C83D5F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1120;
+				ORGANIZATIONNAME = "Johannes Brakensiek";
+				TargetAttributes = {
+					D40D71412379F7C600C83D5F = {
+						CreatedOnToolsVersion = 11.2;
+					};
+				};
+			};
+			buildConfigurationList = D40D713D2379F7C600C83D5F /* Build configuration list for PBXProject "DictionaryReader" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+				English,
+			);
+			mainGroup = D40D71392379F7C600C83D5F;
+			productRefGroup = D40D71432379F7C600C83D5F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D40D71412379F7C600C83D5F /* DictionaryReader */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D40D71402379F7C600C83D5F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D45344DE237A274900D96562 /* DictionaryReaderInfo.plist in Resources */,
+				D40D71BF2379F7F700C83D5F /* dict.png in Resources */,
+				D40D71AE2379F7F700C83D5F /* Preferences.nib in Resources */,
+				D40D71AA2379F7F700C83D5F /* DictionaryReader.nib in Resources */,
+				D40D71C6237A0F4700C83D5F /* DictionaryReader.iconset in Resources */,
+				D40D71BE2379F7F700C83D5F /* DictionaryReader.tif in Resources */,
+				D40D71C3237A068000C83D5F /* jargon.index in Resources */,
+				D40D71BC2379F7F700C83D5F /* jargon.dict in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D40D713E2379F7C600C83D5F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D40D71982379F7F700C83D5F /* Definition.m in Sources */,
+				D40D71BA2379F7F700C83D5F /* NSString+Convenience.m in Sources */,
+				D40D71A02379F7F700C83D5F /* DictConnection.m in Sources */,
+				D40D719C2379F7F700C83D5F /* UKNibOwner.m in Sources */,
+				D40D71B92379F7F700C83D5F /* NSScanner+Base64Encoding.m in Sources */,
+				D40D719F2379F7F700C83D5F /* NSString+DictLineParsing.m in Sources */,
+				D40D71AF2379F7F700C83D5F /* NSString+Clickable.m in Sources */,
+				D40D719A2379F7F700C83D5F /* DictionaryHandle.m in Sources */,
+				D40D719E2379F7F700C83D5F /* AppController.m in Sources */,
+				D40D71B22379F7F700C83D5F /* StreamLineReader.m in Sources */,
+				D40D71B32379F7F700C83D5F /* StreamLineWriter.m in Sources */,
+				D40D71B72379F7F700C83D5F /* LocalDictionary.m in Sources */,
+				D40D71B52379F7F700C83D5F /* main.m in Sources */,
+				D40D71A22379F7F700C83D5F /* HistoryManager.m in Sources */,
+				D40D71BB2379F7F700C83D5F /* Preferences.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		D40D71732379F7F400C83D5F /* DictionaryReader.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D40D71742379F7F400C83D5F /* English */,
+			);
+			name = DictionaryReader.nib;
+			sourceTree = "<group>";
+		};
+		D40D71792379F7F400C83D5F /* Preferences.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D40D717A2379F7F400C83D5F /* English */,
+			);
+			name = Preferences.nib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D40D71512379F7C700C83D5F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		D40D71522379F7C700C83D5F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		D40D71542379F7C700C83D5F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_ENTITLEMENTS = DictionaryReader/DictionaryReader.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "$(SRCROOT)/DictionaryReaderInfo.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				"OTHER_CFLAGS[arch=*]" = "";
+				PRODUCT_BUNDLE_IDENTIFIER = de.codingpastor.DictionaryReader;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		D40D71552379F7C700C83D5F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_ENTITLEMENTS = DictionaryReader/DictionaryReader.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "$(SRCROOT)/DictionaryReaderInfo.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				"OTHER_CFLAGS[arch=*]" = (
+					"//:configuration",
+					"=",
+					"Debug\nOTHER_CFLAGS[arch=*]",
+					"=",
+					PREDEFINED_DICTIONARIES,
+					"REMOTE_DICTIONARIES\n\n//:completeSettings",
+					"=",
+					"none\nPREDEFINED_DICTIONARIES",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = de.codingpastor.DictionaryReader;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D40D713D2379F7C600C83D5F /* Build configuration list for PBXProject "DictionaryReader" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D40D71512379F7C700C83D5F /* Debug */,
+				D40D71522379F7C700C83D5F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D40D71532379F7C700C83D5F /* Build configuration list for PBXNativeTarget "DictionaryReader" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D40D71542379F7C700C83D5F /* Debug */,
+				D40D71552379F7C700C83D5F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D40D713A2379F7C600C83D5F /* Project object */;
+}
