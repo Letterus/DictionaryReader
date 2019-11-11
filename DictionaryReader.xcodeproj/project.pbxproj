@@ -487,16 +487,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
-				"OTHER_CFLAGS[arch=*]" = (
-					"//:configuration",
-					"=",
-					"Debug\nOTHER_CFLAGS[arch=*]",
-					"=",
-					PREDEFINED_DICTIONARIES,
-					"REMOTE_DICTIONARIES\n\n//:completeSettings",
-					"=",
-					"none\nPREDEFINED_DICTIONARIES",
-				);
+				"OTHER_CFLAGS[arch=*]" = "";
 				PRODUCT_BUNDLE_IDENTIFIER = de.codingpastor.DictionaryReader;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
