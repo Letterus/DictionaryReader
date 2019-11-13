@@ -26,7 +26,7 @@
  * be found. If there's no such character in the
  * string, a value of -1 is returned.
  */
-- (int) firstIndexOf: (unichar) aCharacter
+- (NSUInteger) firstIndexOf: (unichar) aCharacter
 {
 	return [self firstIndexOf: aCharacter fromIndex: 0];
 }
@@ -38,7 +38,7 @@
  * no such character in the string, a value of -1 is
  * returned.
  */
-- (int) firstIndexOf: (unichar) aCharacter fromIndex: (int) startIndex
+- (NSUInteger) firstIndexOf: (unichar) aCharacter fromIndex: (NSUInteger) startIndex
 {
 	// NSNotFound means 'not found' or -inside this method- 'not *yet* found'
 	NSInteger result = NSNotFound;

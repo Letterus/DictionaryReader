@@ -17,11 +17,11 @@
 	// Instance variables
 	NSInputStream* inputStream;
 	uint8_t* delim;
-	unsigned delimSize;
+	NSUInteger delimSize;
   
 	uint8_t* strBuf;
-	unsigned strBufPos;
-	unsigned strBufSize;
+	NSUInteger strBufPos;
+	NSUInteger strBufSize;
 }
 
 // Class methods

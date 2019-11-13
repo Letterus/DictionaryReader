@@ -111,7 +111,7 @@
 	//NSLog(@"getMoreChars: now reading from %@", inputStream);
   
 	// read bytes
-	int numBytesRead = [inputStream read: (strBuf+strBufPos)
+	NSUInteger numBytesRead = [inputStream read: (strBuf+strBufPos)
 	                           maxLength: (strBufSize-strBufPos)];
   
   

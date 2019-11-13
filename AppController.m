@@ -104,7 +104,7 @@ NSDictionary* normalAttributes;
 		if (inLink == YES) 
 		{
 			nextBracketIdx = [aString firstIndexOf: (unichar)'}'
-			                             fromIndex: (int)index];
+			                             fromIndex: index];
       
 			if (nextBracketIdx == NSNotFound)
 			{
@@ -131,9 +131,9 @@ NSDictionary* normalAttributes;
 		else 
 		{ // inLink == FALSE
 			nextBracketIdx = [aString firstIndexOf: (unichar)'{'
-			                             fromIndex: (int)index];
+			                             fromIndex: index];
       
-			if (nextBracketIdx == NSNotFound || nextBracketIdx > strLength)
+			if (nextBracketIdx == NSNotFound)
 			{
 				/* treat as if the next bracket was right after the
 				   last character in the string */
@@ -142,7 +142,7 @@ NSDictionary* normalAttributes;
 
             // NSLog(@"Index: %lo, Length: %lo", (unsigned long)nextBracketIdx, (unsigned long)strLength);
 			// crop text
-			NSString* text = [aString substringWithRange: NSMakeRange(index, (int)nextBracketIdx-index)];
+			NSString* text = [aString substringWithRange: NSMakeRange(index, nextBracketIdx-index)];
       
 			// proceed right after the bracket
 			index = nextBracketIdx + 1;
@@ -415,7 +415,7 @@ NSDictionary* normalAttributes;
 		NS_DURING
 			[link click];
 		NS_HANDLER
-			NSRunAlertPanel(@"Link click failed!", [localException reason],
+        NSRunAlertPanel(@"Link click failed!", @"%@", [localException reason],
 		                    @"Oh no!", nil, nil);
 			return NO;
 		NS_ENDHANDLER;
@@ -547,7 +547,7 @@ NSDictionary* normalAttributes;
 			{
 				NSRunAlertPanel (
 					@"Word definition failed.",
-					[NSString stringWithFormat:
+                                 @"%@", [NSString stringWithFormat:
 				@"The definition of %@ failed because of this exception:\n%@",
 				 aWord, [localException reason]],
 				@"Argh", nil, nil);

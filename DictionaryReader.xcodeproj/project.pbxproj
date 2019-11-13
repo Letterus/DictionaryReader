@@ -29,7 +29,6 @@
 		D40D71BF2379F7F700C83D5F /* dict.png in Resources */ = {isa = PBXBuildFile; fileRef = D40D71932379F7F700C83D5F /* dict.png */; };
 		D40D71C3237A068000C83D5F /* jargon.index in Resources */ = {isa = PBXBuildFile; fileRef = D40D71912379F7F700C83D5F /* jargon.index */; };
 		D40D71C6237A0F4700C83D5F /* DictionaryReader.iconset in Resources */ = {isa = PBXBuildFile; fileRef = D40D71C5237A0F4600C83D5F /* DictionaryReader.iconset */; };
-		D45344DE237A274900D96562 /* DictionaryReaderInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = D45344DD237A274900D96562 /* DictionaryReaderInfo.plist */; };
 		D4F5CF19237AA47200AFFAC2 /* COPYING in Resources */ = {isa = PBXBuildFile; fileRef = D4F5CF13237AA47200AFFAC2 /* COPYING */; };
 		D4F5CF1A237AA47200AFFAC2 /* INSTALL in Resources */ = {isa = PBXBuildFile; fileRef = D4F5CF14237AA47200AFFAC2 /* INSTALL */; };
 		D4F5CF1B237AA47200AFFAC2 /* README in Resources */ = {isa = PBXBuildFile; fileRef = D4F5CF15237AA47200AFFAC2 /* README */; };
@@ -315,7 +314,6 @@
 				D4F5CF19237AA47200AFFAC2 /* COPYING in Resources */,
 				D4F5CF1B237AA47200AFFAC2 /* README in Resources */,
 				D4F5CF1C237AA47200AFFAC2 /* lat-deu.dict in Resources */,
-				D45344DE237A274900D96562 /* DictionaryReaderInfo.plist in Resources */,
 				D40D71BF2379F7F700C83D5F /* dict.png in Resources */,
 				D4F5CF1E237AA47200AFFAC2 /* lat-deu.index in Resources */,
 				D40D71AE2379F7F700C83D5F /* Preferences.nib in Resources */,

@@ -35,14 +35,14 @@
 	if (UTF8data == nil)
 		return NO;
   
-	unsigned int length = [UTF8data length];
+	NSUInteger length = [UTF8data length];
 	uint8_t* bytes = (uint8_t*) [UTF8data bytes];
-	unsigned int position = 0;
+	NSUInteger position = 0;
   
 	while (/* [outputStream hasSpaceAvailable] && */ position < length) 
 	{
-		unsigned int written = [outputStream write: (bytes+position)
-		                                 maxLength: length-position];
+		NSUInteger written = [outputStream write: (bytes+position)
+                                       maxLength: length-position];
     
 		position += written;
 	}

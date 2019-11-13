@@ -247,7 +247,7 @@
 /**
  * Returns the number of rows in the dictionary selection table.
  */
-- (int) numberOfRowsInTableView: (NSTableView *)aTableView
+- (NSUInteger) numberOfRowsInTableView: (NSTableView *)aTableView
 {
 	return [_dictionaries count];
 }
