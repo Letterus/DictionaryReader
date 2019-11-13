@@ -251,9 +251,6 @@
 			*error = [NSString stringWithFormat: @"No results from %@", self];
 		return nil;
 	}
-	if (error)
-		*error = [NSString stringWithFormat: @"%@ error", self];
-	return nil;
 }
 
 /**
@@ -290,11 +287,13 @@
   
 	if (opened == YES)
 		return;
+
+    indexStr = [NSString stringWithContentsOfFile: indexFile
+                                         encoding: NSUTF8StringEncoding
+                                            error: NULL ];
   
-	indexStr = [NSString stringWithContentsOfFile: indexFile];
-  
-	NSAssert1(indexStr != nil, @"Index file %@ could not be opened!", indexFile);
-  
+    NSAssert1(indexStr != nil, @"Index file %@ could not be opened!", indexFile);
+    
 	NSString *word = nil;
 	NSString *offset = nil;
 	NSMutableDictionary* dict;
@@ -339,26 +338,41 @@ NSLog(@"Finish open");
   
 	// Retrieve full name of database! ------------
 	NSString* name = [self _getEntryFor: @"00-database-short"];
-	NSScanner* scanner = [NSScanner scannerWithString: name];
-  
-	// consume first line (don't need it, it reads 00-database-short. ;-))
-	[scanner scanUpToString: @"\n" intoString: NULL];
-  
-	// consume newline
-	[scanner scanString: @"\n" intoString: NULL];
-  
-	// consume first few whitespaces
-	[scanner scanCharactersFromSet: [NSCharacterSet whitespaceCharacterSet]
-	                    intoString: NULL];
-  
-	// get the name itself
-	[scanner scanUpToString: @"\n" intoString: &name];
-  
-	// assign it
-	ASSIGN(fullName, name);
-  
-	// that's it, we've opened the database!
-	opened = YES;
+    if(name != nil) {
+        [self scanValueFromStringForEntry: name];
+        ASSIGN(fullName, name);
+        
+        // that's it, we've opened the database!
+        opened = YES;
+        return;
+    }
+    
+    name = [self _getEntryFor: @"00databaseshort"];
+    if(name != nil) {
+        [self scanValueFromStringForEntry: name];
+        ASSIGN(fullName, name);
+    }
+    
+    // that's it, we've opened the database!
+    opened = YES;
+}
+
+- (void) scanValueFromStringForEntry: (NSString*) entry
+{
+    NSScanner* scanner = [NSScanner scannerWithString: entry];
+    
+    // consume first line (don't need it, it reads f.e. 00-database-short. ;-))
+    [scanner scanUpToString: @"\n" intoString: NULL];
+    
+    // consume newline
+    [scanner scanString: @"\n" intoString: NULL];
+    
+    // consume first few whitespaces
+    [scanner scanCharactersFromSet: [NSCharacterSet whitespaceCharacterSet]
+                        intoString: NULL];
+    
+    // get the name itself
+    [scanner scanUpToString: @"\n" intoString: &entry];
 }
 
 /**
@@ -458,7 +472,7 @@ NSLog(@"Finish open");
 	// convert it to a string
 	// XXX: Which encoding are dict-server-like dictionaries stored in?!
 	NSString* entry = [[NSString alloc] initWithData: data
-	                                        encoding: NSASCIIStringEncoding];
+	                                        encoding: NSUTF8StringEncoding];
   
 	return AUTORELEASE(entry);
 }

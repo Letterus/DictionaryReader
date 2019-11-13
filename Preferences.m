@@ -124,8 +124,12 @@
 #ifdef GNUSTEP
 		if ([fm createDirectoryAtPath: path attributes: nil] == NO)
 #else
-        NSError * error;
-        [fm createDirectoryAtPath: path withIntermediateDirectories:YES attributes: nil error: &error];
+        NSError *error;
+        [fm createDirectoryAtPath: path
+      withIntermediateDirectories: YES
+                       attributes: nil
+                            error: &error];
+        
         if (error)
 #endif
 		{
@@ -175,7 +179,7 @@
 {
 	NSArray* searchPaths = [NSArray arrayWithObjects:
 		@"~/GNUstep/Library/DictionaryReader/Dictionaries",  // user home
-        @"~/Library/Application Support/DictionaryReader",
+        @"~/Library/Application Support/DictionaryReader/Dictionaries",
 		/* Add more location if needed */
         nil
     ];
@@ -191,7 +195,7 @@
 - (void) searchInDirectory: (NSString *) dirName;
 {
 	NSFileManager* manager = [NSFileManager defaultManager];
-	NSArray* files = [manager directoryContentsAtPath: dirName];
+	NSArray* files = [manager contentsOfDirectoryAtPath: dirName error: NULL];
     
 	if ((files == nil) || ([files count] == 0))
 		return; // directory not present or empty

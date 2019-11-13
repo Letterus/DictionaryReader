@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 45;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -30,6 +30,12 @@
 		D40D71C3237A068000C83D5F /* jargon.index in Resources */ = {isa = PBXBuildFile; fileRef = D40D71912379F7F700C83D5F /* jargon.index */; };
 		D40D71C6237A0F4700C83D5F /* DictionaryReader.iconset in Resources */ = {isa = PBXBuildFile; fileRef = D40D71C5237A0F4600C83D5F /* DictionaryReader.iconset */; };
 		D45344DE237A274900D96562 /* DictionaryReaderInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = D45344DD237A274900D96562 /* DictionaryReaderInfo.plist */; };
+		D4F5CF19237AA47200AFFAC2 /* COPYING in Resources */ = {isa = PBXBuildFile; fileRef = D4F5CF13237AA47200AFFAC2 /* COPYING */; };
+		D4F5CF1A237AA47200AFFAC2 /* INSTALL in Resources */ = {isa = PBXBuildFile; fileRef = D4F5CF14237AA47200AFFAC2 /* INSTALL */; };
+		D4F5CF1B237AA47200AFFAC2 /* README in Resources */ = {isa = PBXBuildFile; fileRef = D4F5CF15237AA47200AFFAC2 /* README */; };
+		D4F5CF1C237AA47200AFFAC2 /* lat-deu.dict in Resources */ = {isa = PBXBuildFile; fileRef = D4F5CF16237AA47200AFFAC2 /* lat-deu.dict */; };
+		D4F5CF1D237AA47200AFFAC2 /* lat-deu.dict.gz in Resources */ = {isa = PBXBuildFile; fileRef = D4F5CF17237AA47200AFFAC2 /* lat-deu.dict.gz */; };
+		D4F5CF1E237AA47200AFFAC2 /* lat-deu.index in Resources */ = {isa = PBXBuildFile; fileRef = D4F5CF18237AA47200AFFAC2 /* lat-deu.index */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -93,6 +99,12 @@
 		D40D71962379F7F700C83D5F /* StreamLineReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StreamLineReader.h; sourceTree = "<group>"; };
 		D40D71C5237A0F4600C83D5F /* DictionaryReader.iconset */ = {isa = PBXFileReference; lastKnownFileType = folder.iconset; path = DictionaryReader.iconset; sourceTree = "<group>"; };
 		D45344DD237A274900D96562 /* DictionaryReaderInfo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = DictionaryReaderInfo.plist; sourceTree = "<group>"; };
+		D4F5CF13237AA47200AFFAC2 /* COPYING */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = COPYING; sourceTree = "<group>"; };
+		D4F5CF14237AA47200AFFAC2 /* INSTALL */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = INSTALL; sourceTree = "<group>"; };
+		D4F5CF15237AA47200AFFAC2 /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
+		D4F5CF16237AA47200AFFAC2 /* lat-deu.dict */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "lat-deu.dict"; sourceTree = "<group>"; };
+		D4F5CF17237AA47200AFFAC2 /* lat-deu.dict.gz */ = {isa = PBXFileReference; lastKnownFileType = archive.gzip; path = "lat-deu.dict.gz"; sourceTree = "<group>"; };
+		D4F5CF18237AA47200AFFAC2 /* lat-deu.index */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "lat-deu.index"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -214,6 +226,7 @@
 		D40D718E2379F7F700C83D5F /* Dictionaries */ = {
 			isa = PBXGroup;
 			children = (
+				D4F5CF12237AA47200AFFAC2 /* lat-deu */,
 				D40D718F2379F7F700C83D5F /* jargon */,
 			);
 			path = Dictionaries;
@@ -226,6 +239,19 @@
 				D40D71912379F7F700C83D5F /* jargon.index */,
 			);
 			path = jargon;
+			sourceTree = "<group>";
+		};
+		D4F5CF12237AA47200AFFAC2 /* lat-deu */ = {
+			isa = PBXGroup;
+			children = (
+				D4F5CF13237AA47200AFFAC2 /* COPYING */,
+				D4F5CF14237AA47200AFFAC2 /* INSTALL */,
+				D4F5CF15237AA47200AFFAC2 /* README */,
+				D4F5CF16237AA47200AFFAC2 /* lat-deu.dict */,
+				D4F5CF17237AA47200AFFAC2 /* lat-deu.dict.gz */,
+				D4F5CF18237AA47200AFFAC2 /* lat-deu.index */,
+			);
+			path = "lat-deu";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -263,7 +289,7 @@
 				};
 			};
 			buildConfigurationList = D40D713D2379F7C600C83D5F /* Build configuration list for PBXProject "DictionaryReader" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 3.1";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -286,11 +312,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4F5CF19237AA47200AFFAC2 /* COPYING in Resources */,
+				D4F5CF1B237AA47200AFFAC2 /* README in Resources */,
+				D4F5CF1C237AA47200AFFAC2 /* lat-deu.dict in Resources */,
 				D45344DE237A274900D96562 /* DictionaryReaderInfo.plist in Resources */,
 				D40D71BF2379F7F700C83D5F /* dict.png in Resources */,
+				D4F5CF1E237AA47200AFFAC2 /* lat-deu.index in Resources */,
 				D40D71AE2379F7F700C83D5F /* Preferences.nib in Resources */,
+				D4F5CF1A237AA47200AFFAC2 /* INSTALL in Resources */,
 				D40D71AA2379F7F700C83D5F /* DictionaryReader.nib in Resources */,
 				D40D71C6237A0F4700C83D5F /* DictionaryReader.iconset in Resources */,
+				D4F5CF1D237AA47200AFFAC2 /* lat-deu.dict.gz in Resources */,
 				D40D71BE2379F7F700C83D5F /* DictionaryReader.tif in Resources */,
 				D40D71C3237A068000C83D5F /* jargon.index in Resources */,
 				D40D71BC2379F7F700C83D5F /* jargon.dict in Resources */,
@@ -462,10 +494,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/DictionaryReaderInfo.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				"OTHER_CFLAGS[arch=*]" = "";
 				PRODUCT_BUNDLE_IDENTIFIER = de.codingpastor.DictionaryReader;
@@ -482,10 +511,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/DictionaryReaderInfo.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				"OTHER_CFLAGS[arch=*]" = "";
 				PRODUCT_BUNDLE_IDENTIFIER = de.codingpastor.DictionaryReader;
