@@ -318,14 +318,13 @@ NSLog(@"Start open");
         // check if it exists first
         if([dict objectForKey: word] != nil) {
             //NSLog(@"Key %@ already exists.", word);
-            [[dict objectForKey: word] addObject:offset];
+            [[dict objectForKey: word] addObject: offset];
         } else {
-            NSMutableArray *array = [NSMutableArray array];
-            [array addObject:offset];
+            NSMutableArray *array = [NSMutableArray arrayWithObject: offset];
             [dict setObject: array forKey: word];
         }
 	}
-NSLog(@"Finish open");  
+    NSLog(@"Finish open");  
   
 	ASSIGN(ranges, [NSDictionary dictionaryWithDictionary: dict]);
 	NSAssert1(ranges != nil,
