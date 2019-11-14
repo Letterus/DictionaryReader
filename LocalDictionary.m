@@ -315,7 +315,15 @@ NSLog(@"Start open");
 		[indexScanner setScanLocation: [indexScanner scanLocation]+1];
 
 		// save entry in index -------------------------------------------
-		[dict setObject: offset forKey: word];
+        // check if it exists first
+        if([dict objectForKey: word] != nil) {
+            //NSLog(@"Key %@ already exists.", word);
+            [[dict objectForKey: word] addObject:offset];
+        } else {
+            NSMutableArray *array = [NSMutableArray array];
+            [array addObject:offset];
+            [dict setObject: array forKey: word];
+        }
 	}
 NSLog(@"Finish open");  
   
@@ -427,54 +435,67 @@ NSLog(@"Finish open");
  */
 - (NSString *) _getEntryFor: (NSString *) aWord
 {
-	NSAssert1(dictHandle != nil, @"Dictionary file %@ not opened!", dictFile);
-  
-	// get range of entry
-	NSString *offset = [ranges objectForKey: aWord];
-	if (offset == nil)
-	{
-		offset = [ranges objectForKey: [aWord lowercaseString]];
-	}
-	if (offset == nil)
-	{
-		offset = [ranges objectForKey: [aWord uppercaseString]];
-	}
-	if (offset == nil)
-	{
-		offset = [ranges objectForKey: [aWord capitalizedString]];
-	}
-	if (offset == nil)
-	{
-		/* Only capitalized the first letter, not every word */
-//		offset = [ranges objectForKey: [aWord capitalizedString]];
-	}
-	if (offset == nil)
-		return nil
-;
-	NSScanner *scanner = [NSScanner scannerWithString: offset];
-	int location, length;
+    NSAssert1(dictHandle != nil, @"Dictionary file %@ not opened!", dictFile);
 	
-	// scan the start location of the dictionary entry
-	[scanner scanBase64Int: &location];
+    // get range of entry
+	NSMutableArray *entries = [ranges objectForKey: aWord];
+    NSString *stringToReturn = nil;
     
-	// consume second tab '\t'
-	[scanner setScanLocation: [scanner scanLocation]+1];
-    
-	// scan the length of the dictionary entry
-	[scanner scanBase64Int: &length];
+    //NSLog(@"Got Word %@", aWord);
+    for(NSUInteger i = 0; i < [entries count]; i++) {
+        NSString *offset = [entries objectAtIndex:i];
+        
+        //NSLog(@"Got offset %@", offset);
+        if (offset == nil)
+        {
+            offset = [ranges objectForKey: [aWord lowercaseString]];
+        }
+        if (offset == nil)
+        {
+            offset = [ranges objectForKey: [aWord uppercaseString]];
+        }
+        if (offset == nil)
+        {
+            offset = [ranges objectForKey: [aWord capitalizedString]];
+        }
+        if (offset == nil)
+        {
+            /* Only capitalized the first letter, not every word */
+    //		offset = [ranges objectForKey: [aWord capitalizedString]];
+        }
+        if (offset == nil)
+            return nil;
+        
+        NSScanner *scanner = [NSScanner scannerWithString: offset];
+        int location, length;
+        
+        // scan the start location of the dictionary entry
+        [scanner scanBase64Int: &location];
+        
+        // consume second tab '\t'
+        [scanner setScanLocation: [scanner scanLocation]+1];
+        
+        // scan the length of the dictionary entry
+        [scanner scanBase64Int: &length];
 
-	// seek there
-	[dictHandle seekToFileOffset: location];
-  
-	// retrieve entry as data
-	NSData* data = [dictHandle readDataOfLength: length];
-  
-	// convert it to a string
-	// XXX: Which encoding are dict-server-like dictionaries stored in?!
-	NSString* entry = [[NSString alloc] initWithData: data
-	                                        encoding: NSUTF8StringEncoding];
-  
-	return AUTORELEASE(entry);
+        // seek there
+        [dictHandle seekToFileOffset: location];
+      
+        // retrieve entry as data
+        NSData* data = [dictHandle readDataOfLength: length];
+      
+        // convert it to a string
+        NSString *entry = [[NSString alloc] initWithData: data
+                                      encoding: NSUTF8StringEncoding];
+        
+        if(i == 0) {
+            stringToReturn = [NSString stringWithString:entry];
+        } else {
+            stringToReturn = [NSString stringWithFormat:@"%@\n\n%@", stringToReturn, entry];
+        }
+    }
+    
+	return AUTORELEASE(stringToReturn);
 }
 
 @end
