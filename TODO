@@ -1,5 +1,12 @@
 
-* Rethink the initializers of DictionaryHandle class and subclasses in order to 
+* Upgrade memory management to ARC
+    * Use ObjC 2.0 features, especially properties for memory management
+
+* Upgrade error handling from NSAssert to something more appropriate
+
+* Implement gzip/dz access for macOS
+
+* Rethink the initializers of DictionaryHandle class and subclasses in order to
 be clearer, probably by having a single designated initializer in each class 
 that must be called by its subclasses.
 

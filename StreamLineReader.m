@@ -131,7 +131,7 @@
 - (NSString *) extractNextLine
 {
 	NSString* result;
-	int resultLength;
+	NSUInteger resultLength;
   
 	resultLength = [self delimPosInBuffer];
   
@@ -155,12 +155,12 @@
 	return result;
 }
 
-- (int) delimPosInBuffer
+- (NSUInteger) delimPosInBuffer
 {
 	if (delimSize > strBufPos)
 		return -1;
   
-	int pos = 0;
+	NSUInteger pos = 0;
 	while (pos < strBufPos - delimSize + 1) 
 	{
 		if (memcmp(strBuf+pos, delim, delimSize) == 0)
