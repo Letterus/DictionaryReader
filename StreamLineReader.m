@@ -111,8 +111,8 @@
 	//NSLog(@"getMoreChars: now reading from %@", inputStream);
   
 	// read bytes
-	NSUInteger numBytesRead = [inputStream read: (strBuf+strBufPos)
-	                           maxLength: (strBufSize-strBufPos)];
+	NSInteger numBytesRead = [inputStream read: (strBuf+strBufPos)
+                                     maxLength: (strBufSize-strBufPos)];
   
   
 	//NSLog(@"getMoreChars closed with %d bytes read", numBytesRead);
@@ -131,7 +131,7 @@
 - (NSString *) extractNextLine
 {
 	NSString* result;
-	NSUInteger resultLength;
+	NSInteger resultLength;
   
 	resultLength = [self delimPosInBuffer];
   
@@ -155,12 +155,12 @@
 	return result;
 }
 
-- (NSUInteger) delimPosInBuffer
+- (NSInteger) delimPosInBuffer
 {
 	if (delimSize > strBufPos)
 		return -1;
   
-	NSUInteger pos = 0;
+	NSInteger pos = 0;
 	while (pos < strBufPos - delimSize + 1) 
 	{
 		if (memcmp(strBuf+pos, delim, delimSize) == 0)

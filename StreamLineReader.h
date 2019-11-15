@@ -38,7 +38,7 @@
 
 - (BOOL) getMoreCharacters;
 - (NSString *) extractNextLine;
-- (NSUInteger) delimPosInBuffer;
+- (NSInteger) delimPosInBuffer;
 - (BOOL) canExtractNextLine;
 
 @end
