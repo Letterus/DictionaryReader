@@ -1,20 +1,20 @@
 
-* Upgrade memory management to ARC
-    * Use ObjC 2.0 features, especially properties for memory management
+* [] Upgrade memory management to ARC
+    * [] Use ObjC 2.0 features, especially properties for memory management
 
-* Upgrade error handling from NSAssert to something more appropriate
+* [] Upgrade error handling from NSAssert to something more appropriate (NSError?)
 
-* Implement gzip/dz access for macOS
+* [] Implement gzip/dz access for macOS
 
-* Rethink the initializers of DictionaryHandle class and subclasses in order to
+* [] Rethink the initializers of DictionaryHandle class and subclasses in order to
 be clearer, probably by having a single designated initializer in each class 
 that must be called by its subclasses.
 
-* preferences dialog:
-	* Let users add dict servers.
-	* Let users choose their preferred fonts and colors.
-	* Allow users to drop their own dictionaries there
-	* Redo preferences dialog in Gorm (colors are broken)
+* [] preferences dialog:
+	* [] Let users add dict servers.
+	* [] Let users choose their preferred fonts and colors.
+	* [] Allow users to drop their own dictionaries there
+	* [x] Redo preferences dialog in Gorm (colors are broken)
 
-* Test if dictionaries disappeared on refresh and startup!
+* [] Test if dictionaries disappeared on refresh and startup!
 
