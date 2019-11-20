@@ -11,8 +11,8 @@
 	    "rescanDictionaries:"
 	);
 	Outlets = (
-	    "_tableView",
-	    "_prefPanel"
+	    "_prefPanel",
+	    "_tableView"
 	);
 	Super = UKNibOwner;
     };
