@@ -64,8 +64,8 @@ DictionaryReader_LANGUAGES = English
 DictionaryReader_LOCALIZED_RESOURCE_FILES = \
 	DictionaryReader.gorm \
 	Preferences.gorm \
-	DictionaryReader.nib \
-	Preferences.nib
+#	DictionaryReader.xib \
+#	Preferences.xib
 
 DictionaryReader_MAIN_MODEL_FILE = DictionaryReader.gorm
 
